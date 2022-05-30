@@ -1,0 +1,348 @@
+@import "../../global.scss";
+
+.footer {
+  @include bg-gradient-right;
+  width: 100vw;
+
+  .footer-wrapper {
+    height: 100%;
+    width: 100%;
+    @include flex-row-cc;
+    flex: 1;
+    @include middle {
+      flex-direction: column;
+    }
+    .left-side {
+      @include flex-row-cc;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      .column-wrapper {
+        @include flex-row-cc;
+        @include middle {
+          height: 100%;
+          padding: 2px;
+        }
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex: 1;
+        padding: 40px;
+        .column {
+          flex: 1;
+          height: 100%;
+          width: 100%;
+          @include middle {
+            @include flex-row-cc;
+            flex-direction: column;
+            padding: 12px;
+          }
+          &.left {
+            flex: 3;
+            @include middle {
+              flex: 1;
+            }
+            @include small {
+              padding: 12px 1px 0 2px;
+            }
+            .container {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+
+              h3 {
+                color: $darkColor;
+                width: 100%;
+                margin-bottom: 30px;
+                font-size: 16px;
+                @include middle {
+                  text-align: center;
+                  margin-bottom: 10px;
+                }
+              }
+              .brand-wrapper {
+                transition: all 0.4s ease;
+                display: flex;
+                text-decoration: none;
+                margin-bottom: 25px;
+                font-size: 14px;
+                color: $darkColor;
+                font-weight: bolder;
+                @include middle {
+                  margin-bottom: 10px;
+                  font-size: 13px;
+                }
+                .logo-wrapper {
+                  @include flex-row-fs;
+                  margin-right: 5px;
+                  img {
+                    @include flex-row-cc;
+                    width: 20px;
+                  }
+                }
+                &:hover {
+                  color: darken($darkColor, 15%);
+                }
+              }
+              .wrapper {
+                .phone {
+                  @include flex-row-fs;
+                  font-size: 13px;
+                  margin-bottom: 25px;
+                  @include middle {
+                    text-align: center;
+                    margin-bottom: 10px;
+                  }
+                  span {
+                    @include flex-row-cc;
+                    font-size: 15px;
+                    margin-right: 5px;
+                    color: $phoneColor;
+                  }
+                  p {
+                    font-weight: bold;
+                    @include small {
+                      font-size: 11px;
+                    }
+                  }
+                }
+                .whatsapp {
+                  @include flex-row-fs;
+                  font-size: 13px;
+                  margin-bottom: 25px;
+                  @include middle {
+                    text-align: center;
+                    margin-bottom: 10px;
+                  }
+                  @include small {
+                    font-size: 11px;
+                  }
+                  span {
+                    @include flex-row-cc;
+                    font-size: 15px;
+                    margin-right: 5px;
+                    color: $whatsappColor;
+                  }
+                  p {
+                    font-weight: bold;
+                    @include small {
+                      font-size: 11px;
+                    }
+                  }
+                }
+                .address {
+                  @include flex-row-fs;
+                  font-size: 13px;
+                  span {
+                    @include flex-row-cc;
+                    font-size: 15px;
+                    margin-right: 5px;
+                    color: $whatsappColor;
+                  }
+                  p {
+                    font-weight: bold;
+                    text-align: start;
+                    @include small {
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.right {
+            flex: 2;
+            @include middle {
+              flex: 1;
+            }
+            @include small {
+              padding: 0 2px 0 1px;
+            }
+            h3 {
+              width: 100%;
+              margin-bottom: 30px;
+              font-size: 16px;
+              color: $darkColor;
+              @include middle {
+                text-align: center;
+                margin-bottom: 10px;
+              }
+            }
+            .footer-nav {
+              ul {
+                li {
+                  line-height: 35px;
+                  font-size: 14px;
+                  @include flex-row-fs;
+                  a {
+                    @include flex-row-cc;
+                    text-decoration: none;
+                    color: $darkColor;
+                    padding-bottom: 2px;
+                    transition: all 0.4s ease;
+                    span {
+                      color: $myBgColor;
+                      margin-right: 5px;
+                      @include flex-row-cc;
+                    }
+                    &:hover {
+                      color: darken($darkColor, 20%);
+                      font-weight: 500;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-side {
+      @include flex-row-cc;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+
+      .column-wrapper-right {
+        @include flex-row-fs;
+        width: 100%;
+        height: 70%;
+        flex: 1;
+        padding: 40px;
+        @include middle {
+          padding: 5px;
+          height: 100%;
+        }
+
+        .column-start {
+          height: 100%;
+          flex: 1;
+          @include middle {
+            @include flex-row-cc;
+            padding: 10px;
+          }
+          @include small {
+            padding: 0px 2px 0 1px;
+          }
+
+          .container {
+            justify-content: flex-start;
+            flex-direction: column;
+            @include middle {
+              @include flex-row-cc;
+              padding: 10px;
+              height: 110%;
+            }
+            @include small {
+              padding: 10px 0 0 0;
+            }
+
+            h3 {
+              color: $darkColor;
+              width: 100%;
+              margin-bottom: 30px;
+              font-size: 16px;
+              @include middle {
+                text-align: center;
+                margin-bottom: 10px;
+                @include small {
+                  font-size: 14px;
+                }
+              }
+            }
+            ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              li {
+                line-height: 30px;
+                @include small {
+                  line-height: 20px;
+                }
+                p {
+                  font-size: 12px;
+                  font-weight: bold;
+                  span {
+                    font-size: 14px;
+                    font-weight: bolder;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .column-end {
+          width: 100%;
+          height: 100%;
+          flex: 1;
+          @include small {
+            padding: 0px 1px 0 2px;
+          }
+
+          .container {
+            width: 100%;
+            height: 100%;
+            justify-content: flex-start;
+            flex-direction: column;
+            h3 {
+              font-size: 16px;
+              color: $darkColor;
+              width: 100%;
+              margin-bottom: 30px;
+              @include middle {
+                text-align: center;
+                margin-bottom: 10px;
+              }
+            }
+            .icon-wrapper {
+              width: 100%;
+              height: calc(100% - 100px);
+              display: flex;
+              flex-wrap: wrap;
+              flex: 4;
+              justify-content: space-around;
+
+              .icons {
+                @include flex-row-fs;
+                flex: 50%;
+                font-size: 24px;
+                @include middle {
+                  @include flex-row-cc;
+                }
+                span {
+                  @include flex-row-fs;
+                  a{
+                    text-decoration: none;
+                    color:inherit ;
+                  }
+                }
+                &.face {
+                  color: rgb(43, 100, 224);
+                }
+                &.insta {
+                  color: rgb(134, 31, 155);
+                }
+                &.youtube {
+                  color: rgb(230, 16, 16);
+                }
+                &.google {
+                  color: rgb(0, 0, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  > p {
+    margin-top: 5px;
+    padding: 2px;
+    font-size: 11px;
+    text-align: center;
+    background-color: rgb(56, 56, 56);
+    color: $lightColor;
+  }
+}

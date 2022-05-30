@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.direct {
+  @include small {
+    display: flex;
+  }
+  display: none;
+  height: 70px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-around;
+  .button-container {
+    @include flex-row-cc;
+    flex-direction: column;
+    margin-bottom: 5px;
+    .d-phone {
+      border-radius: 50%;
+      left: 170px;
+      text-decoration: none;
+      color: $lightColor;
+      background-color: blue;
+      opacity: .7;
+      z-index: 4;
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
+      @include flex-row-cc;
+      margin: 5px;
+    }
+    span{
+        font-size: 11px;
+        font-weight: bold;
+    }
+  }
+  .button-container {
+    @include flex-row-cc;
+    flex-direction: column;
+    margin-bottom: 5px;
+    .d-whatsapp {
+      border-radius: 50%;
+      left: 70px;
+      text-decoration: none;
+      color: $lightColor;
+      background-color: green;
+      opacity: .7;
+      z-index: 4;
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
+      @include flex-row-cc;
+      margin: 5px;
+    }
+    span{
+        font-size: 11px;
+        font-weight: bold;
+    }
+  }
+}

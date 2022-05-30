@@ -1,0 +1,94 @@
+@import "../../global.scss";
+.contact {
+  @include bg-gradient;
+  display: flex;
+
+@include middle{
+  flex-direction: column;
+}
+  .left {
+    order: 2;
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      @include middle{
+        width: 100%;
+      }
+    }
+  }
+  .right {
+    order: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      @include middle{
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom:5px;
+        @include small{
+          width: 100%;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+        @include small{
+          width: 100%;
+        }
+      }
+
+      button {
+        @include flex-row-cc;
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: $myBgColor;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
+        padding: 8px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+        @include small{
+          width: 100%;
+        }
+      }
+
+      span {
+        color: green;
+        font-size: 14px;
+        
+      }
+    }
+  }
+}

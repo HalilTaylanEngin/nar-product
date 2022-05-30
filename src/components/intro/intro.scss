@@ -1,0 +1,117 @@
+@import "../../global.scss";
+
+.intro {
+  @include bg-gradient-right;
+  .intro-wrapper {
+    @include flex-row-cc;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    @include small {
+      flex-direction: column;
+    }
+
+    .left {
+
+      flex: 1;
+      @include flex-row-cc;
+      height: 100%;
+      width: 100%;
+      .wrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include flex-row-sb;
+
+        .arrow-wrapper {
+          position: absolute;
+          top: calc(50% - 17px);
+          left: 0;
+          width: 100%;
+          padding: 0 20px;
+          @include flex-row-sb;
+
+          .arrow {
+            font-size: 34px;
+            font-weight: 700;
+            color: $lightColor;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            z-index: 5;
+            padding: 5px;
+            border-radius: 50%;
+            @include flex-row-cc;
+            cursor: pointer;
+          }
+        }
+        .container {
+          transition: all 0.7s ease;
+          height: 100%;
+          width: 400%;
+          position: absolute;
+          top: 0;
+          @include flex-row-cc;
+
+          .item {
+            width: 25%;
+            padding: 8px;
+            img {
+              border-radius: 100px 0 0 100px;
+              width: 100%;
+              @include small{
+                border-radius: 0;
+                height: 100%;
+              }
+            }
+            @include small{
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      padding: 8px;
+      @include flex-row-fs;
+      
+      .content-wrapper{
+        height: 100%;
+        color: $darkColor;
+        h2{
+          font-size:44px;
+          @include small {
+            font-size:24px;
+          }
+          
+        }
+        .itype-text{
+          @include flex-row-fs;
+          height: 50px;
+          color: $myBgColor;
+          span{
+            font-size: 26px;
+            @include flex-row-cc;
+            margin-right: 8px;
+            @include small {
+              font-size:18px;
+            }
+          
+          }
+          p{
+            font-weight: bold;
+            font-size: 24px;
+            @include small {
+              font-size:16px;
+            }
+          }
+        }
+        h3{
+          @include middle{
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

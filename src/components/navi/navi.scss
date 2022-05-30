@@ -1,0 +1,117 @@
+@import "../../global.scss";
+
+.navi {
+  @include bg-gradient;
+  position: fixed;
+  width: 240px;
+  height: 100vh;
+  right: -240px;
+  z-index: 5;
+  transition: all 0.4s ease;
+
+  &.show {
+    right: 0;
+  }
+
+  .navi-header {
+    height: 70px;
+    @include flex-row-fs;
+
+    .close-btn {
+      padding: 5px;
+      font-size: 34px;
+      color: $darkColor;
+      cursor: pointer;
+      &:hover {
+        color: darken($darkColor, 20%);
+      }
+    }
+  }
+  .navi-nav {
+    height: calc(100% - 170px);
+    padding: 30px 2px 0 8px;
+
+    .brand-wrapper {
+      @include flex-row-fs;
+      text-decoration: none;
+      color: $darkColor;
+      transition: all 0.4s ease;
+      margin-bottom: 40px;
+      .logo-wrapper {
+        @include flex-row-fs;
+        margin-right: 5px;
+
+        img {
+          width: 20px;
+        }
+      }
+      .brand {
+        font-size: 16px;
+      }
+      &:hover {
+        color: darken($darkColor, 20%);
+      }
+    }
+    ul {
+      li {
+        line-height: 32px;
+        padding: 2px;
+        border-radius: 8px;
+
+        a {
+          @include flex-row-fs;
+          text-decoration: none;
+          color: $darkColor;
+          transition: all 0.4s ease;
+          border-radius: 8px;
+          span {
+            @include flex-row-cc;
+            margin-right: 5px;
+            color: $myBgColor;
+            padding: 4px;
+          }
+          &:hover {
+            color: darken($darkColor, 20%);
+            background-color: darken($lightColor, 20%);
+          }
+        }
+      }
+    }
+  }
+  .navi-footer {
+     width: 100%;
+     height: 100px;
+    .icon-wrapper {
+      width: 100%;
+      height:100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 4;
+      justify-content: space-around;
+
+      .icons {
+        @include flex-row-cc;
+        flex: 50%;
+        font-size: 24px;
+        span {
+          @include flex-row-fs;
+          a{
+            color: inherit;
+          }
+        }
+        &.face {
+          color: rgb(43, 100, 224);
+        }
+        &.insta {
+          color: rgb(134, 31, 155);
+        }
+        &.youtube {
+          color: rgb(230, 16, 16);
+        }
+        &.google {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}

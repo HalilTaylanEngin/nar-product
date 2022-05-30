@@ -1,0 +1,111 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 1px 1px 10px $darkColor;
+  @include bg-gradient;
+
+  .topbar-wrapper {
+    @include flex-row-sb;
+    height: 100%;
+    padding: 8px 50px;
+    @include middle{
+      padding: 6px 10px;
+    }
+
+    .topbar-left {
+      @include flex-row-cc;
+
+      .brand-wrapper {
+        @include flex-row-cc;
+        text-decoration: none;
+        color: $darkColor;
+        transition: all 0.4s ease;
+        .logo-wrapper {
+          @include flex-row-cc;
+          margin-right: 5px;
+
+          img {
+            width: 30px;
+            @include middle {
+              width: 24px;
+            }
+          }
+        }
+        .brand {
+          font-size: 26px;
+          @include middle {
+            font-size: 18px;
+          }
+        }
+        &:hover {
+          color: darken($darkColor, 20%);
+        }
+      }
+    }
+    .topbar-center {
+      .wrapper {
+        @include middle {
+          flex-direction: column;
+          .phone,
+          .whatsapp {
+            margin: 0 !important;
+            font-size: 13px;
+            span {
+              font-size: 16px !important;
+            }
+          }
+        }
+        @include small {
+         display: none;
+        }
+        @include flex-row-sb;
+        .phone {
+          @include flex-row-sb;
+          padding: 8px;
+          margin-right: 10px;
+
+          span {
+            @include flex-row-cc;
+            font-size: 22px;
+            margin-right: 5px;
+            color: $phoneColor;
+          }
+          p {
+            font-weight: bold;
+          }
+        }
+        .whatsapp {
+          @include flex-row-sb;
+          padding: 8px;
+          margin-left: 10px;
+          span {
+            @include flex-row-cc;
+            font-size: 22px;
+            margin-right: 5px;
+            color: $whatsappColor;
+          }
+          p {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .topbar-right {
+      span {
+        font-size: 26px;
+        margin-left: 20px;
+        color: $darkColor;
+        transition: all 0.4s ease;
+        &:hover {
+          color: darken($darkColor, 20%);
+        }
+      }
+    }
+  }
+}

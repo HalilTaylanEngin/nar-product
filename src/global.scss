@@ -1,0 +1,59 @@
+$mainColor: #9fc09b;
+$lightColor: #d7dadf;
+$darkColor: rgb(63, 60, 60);
+$myBgColor: #1b881b;
+$gradient-left: #d3d8d4;
+$superLight: #f3efe8;
+$phoneColor: blue;
+$whatsappColor: green;
+
+@mixin bg-gradient {
+  background: #3e5151;
+  background: -webkit-linear-gradient(to right, $mainColor, $gradient-left);
+  background: linear-gradient(to right, $mainColor, $gradient-left);
+}
+
+@mixin bg-gradient-right {
+  background: #3e5151;
+  background: -webkit-linear-gradient(to right, $gradient-left, $mainColor);
+  background: linear-gradient(to right, $gradient-left, $mainColor);
+}
+
+@mixin flex-row-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-row-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-row-fs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+//responsive
+$large: 992px;
+$middle: 768px;
+$small: 576px;
+
+@mixin large {
+  @media (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin middle {
+  @media (max-width: #{$middle}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
